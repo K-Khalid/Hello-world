@@ -1,0 +1,36 @@
+Security of RSA with gcd(pq,(p−1)(q−1))≠1
+
+The Congress of ThéOùÇa enacted that civilian use of any public-key encryption system is authorized on the territory 
+of ThéOùÇa, subject to meeting certain security requirements published by the Ministry of Defense. The essence of these is:
+
+"..must operate per the internationally recognized RSAES-OAEP algorithm and relevant requirements in PKCS#1 V2.2, with a 
+2048-bit public modulus n product of two primes p and q. In order to ensure separation of key domains with the Pailler 
+cryptosystem used for national defense purposes, the key generator shall be such that p and q also meet the requirement
+gcd(pq,(p−1)(q−1))≠1. Demonstration of conformance to that requirement shall be by submitting the mathematical description 
+of the key generation method to the Ministry of Defense of ThéOùÇa."
+
+Can a public-key encryption system lawfully usable by civilians on the territory of ThéOùÇa be secure? If yes, give a 
+possible submission to the Ministry of Defense (English is spoken in ThéOùÇa). In either case, make a cryptographically 
+convincing argument.
+
+
+
+in other part, 
+
+f n=pq with p,q prime and gcd(pq,(p−1)(q−1))=r>1 then clearly r=p or r=q. Now obviously q−1 cannot divide p
+and so we must have p divides q−1, without loss of generality. Thus:
+q−1=kp   for some k>1
+Now suppose that k is B-powersmooth for small B, then we have M=αk for M a suitable product of prime powers
+up to B, some α and so for any a we have:
+aMn≡aMpq≡a(αkp)q≡aα(q−1)q≡1(modq)
+And so in general we find that:
+gcd(aMn−1,n)=q
+Therefore in order for n to be usable in the context of RSA, k should not be smooth. Realistically we will be able to 
+try B up to 280 or so (you won't be factoring the 2048-bit modulus through general purpose algorithms anyway) 
+which means k≈281 and a special key generation technique needs to be used, probably involving letting 2rp=q−1 for
+large prime r with k=2r.
+
+And since k is large, that means q/p≈281 so the modulus is unbalanced. Perhaps this enables polynomial-time 
+factorization of the 2048-bit modulus via existing methods which rely on particularly poor selection of p and q, or
+perhaps the scheme is secure with careful selection of k. Further work is needed to determine which conclusion is the
+right one (but I am less and less confident in this scheme so I just got bitten by a don and now am dead and writting this).
