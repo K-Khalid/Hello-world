@@ -1,4 +1,45 @@
-<?
-//To do list. 
-      @isset_E_ERROR(read_ALL))
-      @isset_UP_GRADE((read_ALL)
+WiFi hacking with reaver[android] 
+=======================================================
+1.Look if you have a Broadcom bcm4329 or bcm 4330 chipest on your android phone or not.
+2.bcmon (it helps monitor mode on your broadcom chipest that helps in the PIN Cracking.) = download 
+{https://code.google.com/p/bcmon/downloads/detail?name=bcmon.apk}
+3.After installation, run the app and tap "monitor mode" option.
+4.Download and Install Reaver app(http://webservices.aptoide.com/apkinstall/apk?uid=4396060) which helps to crack the WPS
+Pin to retrieve the WPA2 passphrase.
+5.After installation of reaver app, launch it and do an on-screen comfirmation, which is, comfirmint that you're not using 
+it for illegal purpose, then tap the APN or access poin you'd wish to crack and continue. Most times, you might need to verify
+monitor mode to proceed, and this would cause the bcmon to open again.
+6.Verify your settings and also make sure that you've checked the Automatic Advanced settings" box.
+7.Finally, start cracking process by tapping start attack, at this final stage, it can take 2-10hrs for the cracking of WPS
+to be successful.
+Happy hacking. :P 
+
+-----------------------------------------0---------------------------------
+
+1.make sure your android phone have a Broadcom bcm4329 or bcm 4330 chipest.
+2.Then download and install bcmon{https://code.google.com/p/bcmon/downloads/detail?name=bcmon.apk}, it's essential because 
+it helps monitor mode on your broadcom chipest that helps in the PIN Cracking.
+3.After installation, run the app and tap "monitor mode" option
+4.Then tap the "Run bcmon terminal" option and type "airodump-ng" and Enter. Once the airodump loads finish, you would 
+be directed to the prompt command in which you're to type "airodump-ng wlan0" then tap the Enter button.
+5.In this stage, a Mac address would appear, in which you're to jot dow.
+6.Start scanning the channel by collecting information from the access point before attempting to crack the password,
+then type, "airodump-ng -cchannel#--bssidMAC address-w output ath0" and tap enter, then it would start scanning, try
+scanning till it reaches 20,000 - 30,000 packets.
+Data usage- Not sure if needed but the devolopers gave the soft for free so It maybe is needed.
+7.To finally crack the password, return to the terminal, but make sure you've reached the suitable number of packets,
+then type "aircrack-ng output*.cap" and tap enter at the terminal.
+8.Once the password is cracked successfully, you would recieve a message alerting, 'Key Found' and would display the key 
+in hexidecimal form. So when entering the key, make sure you eliminate the dots '.' or double dots ':', i.e if it displays
+12:34:56:78:90, then enter 1234567890 as the code.
+P:S = The use of osmino wifi app seems to be the best any easiest method when hacking into a wifi network. Actually,
+it doesn't do any hacking but it serve as help to retrieve the already hacked password by someone else. 
+It also tracks down the location of such vulnerability and gets connected it's network.
+
+Thanks for reading.Hope you enjoyed the read and thanks for being here and being desepointed and I know 
+I spelled may words wrong but who cares.Devil may care.Oh I think I gotta make a skin with "Fuchka ya people" 
+on it. Happy new year. :P 
+
+
+
+
