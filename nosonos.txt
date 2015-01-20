@@ -41,5 +41,36 @@ I spelled may words wrong but who cares.Devil may care.Oh I think I gotta make a
 on it. Happy new year. :P 
 
 
+=================================================================
+Manager) this.getSystemService(Context.WIFI_SERVICE);
+        StringBuilder s = new StringBuilder();
+        s.append("WiFiKill is currently: ").append((wifikill) ? "ON" : "OFF");
+        s.append("\nWiFi is currently: ").append((wifiManager.isWifiEnabled()) ? "ON" : "OFF");
+        s.append("\n\nWiFiKill kills your WiFi Connection, so you can use your Wired connection.\n\nDisclamer: I am not responsible if this does not work!!\n\n(I heard it didnt, because ethernet wont connect if wifi is off)");
+        tv.setText(s.toString());
+    }
+
+    public void kill() {
+        try {
+            WifiManager wifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
+            wifiManager.setWifiEnabled(true);
+            wifiManager.setWifiEnabled(false);
+        } catch (Exception e) {
+            //
+            e.printStackTrace();
+        }
+        refreshTv();
+    }
+}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+import android.preference.PreferenceManager;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView; 
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
