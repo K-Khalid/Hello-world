@@ -19,7 +19,7 @@ public class WiFiKill {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); //To change body of generated methods, choose Tools | Templates.
+        super.onCreate(savedInstanceState); //To change tghe body of generated methods, choose Tools | Templates.
         initUI();
     }
 
