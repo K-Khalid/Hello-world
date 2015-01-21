@@ -74,3 +74,12 @@ import android.widget.TextView;
 
 
 
+----------------------------------------------------------------------______________________________________
+nerdenLinks ::::: https://epic.org/privacy/drones/
+                http://www.robotshop.com/en/drones.html
+                http://www.airspacemag.com/flight-today/build-your-own-drone-180951417/?page=1
+                http://motherboard.vice.com/read/tapped-all-the-ways-your-phone-can-be-hacked
+                http://www.wusa9.com/story/news/local/2014/12/11/spy-drone-hacking-cell-phones-text-messages/20214047/
+                http://en.wikipedia.org/wiki/Iran%E2%80%93U.S._RQ-170_incident
+                http://www.discovery.com/tv-shows/mythbusters/mythbusters-database/cell-phones-interfere-plane-instruments/
+        -Kkhalid (KiW)
