@@ -1,4 +1,3 @@
-public class WifiKill{
 package nl.frankkie.ouyarandom;
 
 import android.app.Activity;
@@ -6,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-
 
 /**
  *
@@ -58,4 +56,4 @@ public class WiFiKill {
 
     protected void refreshTv() {
         boolean wifikill = prefs.getBoolean("wifikill", false);
-        WifiManager wifiManager = (Wifi
+        WifiManager wifiManager = (Wifi_____________________InSSIDer__________
